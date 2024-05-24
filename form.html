@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Table Booking System</title>
+  <link rel="stylesheet" href="ram.php">
+  <style>
+    body {
+      image-rendering: auto;
+      background-repeat: no-repeat;
+      
+      
+      font-family: Arial, sans-serif;
+      background-image: url(90.jpg);
+      background-attachment: fixed;
+      background-size: 100% 100%;
+      
+    }
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    label, input {
+      display: block;
+      margin-bottom: 10px;
+    }
+    input[type="submit"] {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin: 50px;
+    }
+    select{
+        border-radius: 5 px ;
+        width: 50px;
+        margin: 8px;
+    }
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+
+  </style>
+</head>
+<body background="89.jpg">
+
+  
+
+  
+  <h1 align="center">Restaurant Table Booking System</h1>
+  <form id="bookingForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+    
+    <label for="date">Date:</label>
+    <input type="date" id="date" name="date" required>
+    
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time" required>
+    
+ 
+<label for="Select-Food">Select-Food</label>
+<select id="numbers">
+  <option value="cury chicken">cury chicken</option>
+  <option value="Tikka">Tikka</option>
+  <option value="Biryani">Biryani</option>
+  <option value="Samosa">Samosa</option>
+  <option value="Vada pau">vada pau</option>
+  <option value="Gol Gappa">Gol Gappa</option>
+ 
+</select>
+<label for="party-size">Party Size:</label>
+    
+
+<select id="numbers">
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+</select>
+
+
+    
+    
+    
+
+
+
+    <input type="submit" value="Submit">
+  </form>
+
+  
+  <script>
+    
+   
+    document.getElementById("bookingForm").addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent form submission
+      
+      // Get form data
+      var formData = new FormData(this);
+      
+      // Display confirmation
+      var confirmationMessage = "Booking details:\n";
+      formData.forEach(function(value, key) {
+        confirmationMessage += key + ': ' + value + '\n';
+      });
+      alert(confirmationMessage);
+      
+      // You can send this data to the server using AJAX to process the booking
+      
+      // Clear form fields
+      this.reset();
+    });
+  </script>
+  </div>
+</body>
+</html>
